@@ -1,0 +1,250 @@
+/* CSS Reset */
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* Variables */
+@font-face {
+  font-family: 'Dream Avenue'; /*a name to be used later*/
+  src: url('../fonts/dream-avenue.ttf'); /*URL to font*/
+}
+
+:root {
+  --beige-100: #f5f5f3;
+  --beige-200: #e4e2dd;
+  --beige-300: #dbd9d2;
+  --beige-400: #d3cfc7;
+  --beige-500: #c1bdb1;
+
+  --gold: #977a1c;
+
+  --main-bg: var(--beige-200);
+  --main-text: #000000;
+  --accent: var(--gold);
+  --gutter: 2rem;
+  --padding: var(--gutter);
+}
+
+/* Globals */
+body {
+  background-color: var(--main-bg);
+  color: var(--main-text);
+  font-family: 'Quicksand', sans-serif;
+  margin: 0 auto;
+
+  font-size: 1.15em;
+}
+
+h1 {
+  font-family: 'Dream Avenue';
+  font-size: 3em;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: 'Dream Avenue';
+  font-weight: 500;
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 1.25em;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  padding: 1rem;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+section {
+  display: grid;
+  gap: 1.5rem;
+}
+
+footer {
+  height: 100px;
+  width: 100%;
+}
+
+.content span {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* Utilty */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter);
+
+  background-color: var(--beige-400);
+  /* border: 2px solid var(--accent); */
+  border-radius: 15px;
+  padding-bottom: var(--padding);
+}
+
+.card__img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card > * {
+  padding-inline: var(--padding);
+}
+
+.card a {
+  /* color: #635003; */
+  display: inline-flex;
+  font-weight: 600;
+}
+
+.card button {
+  background: var(--main-bg);
+}
+
+.card button:hover {
+  border: 2px solid var(--accent);
+  color: var(--accent);
+}
+
+/* Page */
+main {
+  display: grid;
+  gap: 4rem;
+}
+
+.content {
+  max-width: 1200px;
+  padding-inline: var(--gutter);
+  margin-inline: auto;
+}
+
+/* Hero */
+.hero {
+  background-color: #e4e2ddcd;
+  background-image: url('../images/hero-bg.png');
+  background-size: cover;
+  background-blend-mode: soft-light;
+
+  display: grid;
+  justify-items: center;
+}
+
+.hero__logo {
+  padding-top: var(--padding);
+}
+
+.hero__title {
+  padding: var(--gutter);
+  font-size: 4em;
+}
+
+/* Intro */
+.intro__title span {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.intro p {
+  /* background-color: var(--accent); */
+}
+
+/* Why */
+.why span {
+  color: #977a1c;
+  font-weight: 600;
+}
+
+/* Offerings */
+.offerings__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+  gap: var(--gutter);
+}
+
+.offerings__esthetics .card__img {
+  background-image: url('../images/course1.png');
+}
+
+.offerings__master .card__img {
+  /* background-color: #fde79e; */
+  background-image: url('../images/course2.png');
+  /* background-blend-mode: multiply; */
+}

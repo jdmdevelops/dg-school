@@ -4,25 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
     <header></header>
     <nav></nav>
     <main>
-      <section class="hero">
-        <figure class="hero__bg">
-          <img class="hero__bg-image" src="hero.png" alt="" />
-        </figure>
+      <section class="hero full-width">
+        <!-- <img class="hero__bg-image" src="hero.png" alt="" /> -->
+
         <figure class="hero__logo">
-          <img src="logo.svg" alt="" />
+          <img src="./images/logo.png" alt="" />
         </figure>
-        <h1 class="hero__title">Reimaging Skincare Education</h1>
+
+        <h1 class="hero__title">Reimagining skincare education.</h1>
       </section>
 
-      <section class="intro">
+      <section class="intro content">
         <figure></figure>
-        <h2>Smaller classes, better education.</h2>
+        <h2 class="intro__title">
+          Smaller classes, <span>better education.</span>
+        </h2>
         <p>
           Lorem ipsum odor amet, consectetuer adipiscing elit. Tempor maecenas
           mauris convallis lobortis tristique. Posuere placerat aliquet
@@ -35,8 +37,8 @@
         </p>
       </section>
 
-      <section class="why">
-        <h2>Why choose esthetics?</h2>
+      <section class="why content">
+        <h2>Why choose <span>esthetics?</span></h2>
         <p>
           Lorem ipsum odor amet, consectetuer adipiscing elit. Tempor maecenas
           mauris convallis lobortis tristique. Posuere placerat aliquet
@@ -49,33 +51,33 @@
         </p>
       </section>
 
-      <section class="offerings">
-        <h2>Our courses:</h2>
-        <div class="offerings__esthetics">
-          <h3>Esthetics</h3>
-          <p>
-            Lorem ipsum odor amet, consectetuer adipiscing elit. Tempor maecenas
-            mauris convallis lobortis tristique. Posuere placerat aliquet
-            accumsan; habitant rhoncus malesuada. Mauris volutpat lacus luctus
-            dolor lectus id eu id. Ornare nunc ipsum tristique habitasse vel
-            lacinia. Etiam penatibus ipsum augue porttitor, lacinia finibus
-            nostra interdum. Ex lacinia netus lacus congue interdum augue eros
-            inceptos dolor. Ullamcorper condimentum pretium finibus consectetur
-            tempor. Iaculis congue ad taciti feugiat massa.
-          </p>
-        </div>
-        <div class="offerings__master">
-          <h3>Master Esthetics</h3>
-          <p>
-            Lorem ipsum odor amet, consectetuer adipiscing elit. Tempor maecenas
-            mauris convallis lobortis tristique. Posuere placerat aliquet
-            accumsan; habitant rhoncus malesuada. Mauris volutpat lacus luctus
-            dolor lectus id eu id. Ornare nunc ipsum tristique habitasse vel
-            lacinia. Etiam penatibus ipsum augue porttitor, lacinia finibus
-            nostra interdum. Ex lacinia netus lacus congue interdum augue eros
-            inceptos dolor. Ullamcorper condimentum pretium finibus consectetur
-            tempor. Iaculis congue ad taciti feugiat massa.
-          </p>
+      <section class="offerings content">
+        <h2>Start your <span>journey:</span></h2>
+        <div class="offerings__container">
+          <div class="offerings__esthetics card">
+            <figure class="card__img"></figure>
+            <h3 class="card__title">Esthetics</h3>
+            <p class="card__section">
+              Lorem ipsum odor amet, consectetuer adipiscing elit. Tempor
+              maecenas mauris convallis lobortis tristique. Posuere placerat
+              aliquet accumsan; habitant rhoncus malesuada. Mauris volutpat
+              lacus luctus dolor lectus id eu id. Ornare nunc ipsum tristique
+              habitasse vel lacinia.
+            </p>
+            <a href=""><button>Learn more</button></a>
+          </div>
+          <div class="offerings__master card">
+            <figure class="card__img"></figure>
+            <h3 class="card__title">Master Esthetics</h3>
+            <p class="card__section">
+              Lorem ipsum odor amet, consectetuer adipiscing elit. Tempor
+              maecenas mauris convallis lobortis tristique. Posuere placerat
+              aliquet accumsan; habitant rhoncus malesuada. Mauris volutpat
+              lacus luctus dolor lectus id eu id. Ornare nunc ipsum tristique
+              habitasse vel lacinia.
+            </p>
+            <a href=""><button>Learn more</button></a>
+          </div>
         </div>
       </section>
     </main>
