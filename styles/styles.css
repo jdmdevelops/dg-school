@@ -84,6 +84,7 @@ h6 {
   --gold: #977a1c;
 
   --main-bg: var(--beige-200);
+  --secondary-bg: var(--beige-400);
   --main-text: #000000;
   --accent: var(--gold);
   --gutter: 2rem;
@@ -124,20 +125,13 @@ a {
   color: inherit;
 }
 
-button {
-  padding: 1rem;
-  border-radius: 15px;
-  cursor: pointer;
-}
-
 section {
   display: grid;
   gap: 1.5rem;
 }
 
-footer {
-  height: 100px;
-  width: 100%;
+address {
+  font-style: normal;
 }
 
 .content span {
@@ -151,7 +145,7 @@ footer {
   flex-direction: column;
   gap: var(--gutter);
 
-  background-color: var(--beige-400);
+  background-color: var(--secondary-bg);
   /* border: 2px solid var(--accent); */
   border-radius: 15px;
   padding-bottom: var(--padding);
@@ -181,7 +175,16 @@ footer {
 
 .card button:hover {
   border: 2px solid var(--accent);
+}
+
+.clickable:hover {
   color: var(--accent);
+}
+
+.primary__button {
+  padding: 1rem;
+  border-radius: 15px;
+  cursor: pointer;
 }
 
 /* Page */
@@ -247,4 +250,49 @@ main {
   /* background-color: #fde79e; */
   background-image: url('../images/course2.png');
   /* background-blend-mode: multiply; */
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--secondary-bg);
+}
+
+.footer__content {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: 4rem;
+  margin-inline: auto;
+  padding: var(--padding);
+
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.footer__email,
+.footer__phone {
+  text-decoration: underline;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.socials__button {
+  all: unset;
+  cursor: pointer;
+}
+
+.socials__button > * {
+  width: 32px;
+  height: 32px;
+}
+
+.socials__button > *:hover {
+  fill: var(--accent);
 }

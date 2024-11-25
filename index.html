@@ -7,21 +7,21 @@
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
-    <header></header>
-    <nav></nav>
+    <header><nav></nav></header>
     <main>
       <section class="hero full-width">
-        <!-- <img class="hero__bg-image" src="hero.png" alt="" /> -->
-
         <figure class="hero__logo">
-          <img src="./images/logo.png" alt="" />
+          <img src="./images/logo.png" alt="DuoGloEsetheticsTraining logo" />
         </figure>
 
         <h1 class="hero__title">Reimagining skincare education.</h1>
       </section>
 
       <section class="intro content">
-        <figure></figure>
+        <figure
+          role="img"
+          aria-label="Student spa beds used for practicing skincare services"
+        ></figure>
         <h2 class="intro__title">
           Smaller classes, <span>better education.</span>
         </h2>
@@ -55,7 +55,11 @@
         <h2>Start your <span>journey:</span></h2>
         <div class="offerings__container">
           <div class="offerings__esthetics card">
-            <figure class="card__img"></figure>
+            <figure
+              class="card__img"
+              role="img"
+              aria-label="Beginner esthetics student performing extractions"
+            ></figure>
             <h3 class="card__title">Esthetics</h3>
             <p class="card__section">
               Lorem ipsum odor amet, consectetuer adipiscing elit. Tempor
@@ -64,10 +68,16 @@
               lacus luctus dolor lectus id eu id. Ornare nunc ipsum tristique
               habitasse vel lacinia.
             </p>
-            <a href=""><button>Learn more</button></a>
+            <a href=""
+              ><button class="primary__button clickable">Learn more</button></a
+            >
           </div>
           <div class="offerings__master card">
-            <figure class="card__img"></figure>
+            <figure
+              class="card__img"
+              role="img"
+              aria-label="Master esthetics student performing dermaplaning"
+            ></figure>
             <h3 class="card__title">Master Esthetics</h3>
             <p class="card__section">
               Lorem ipsum odor amet, consectetuer adipiscing elit. Tempor
@@ -76,11 +86,61 @@
               lacus luctus dolor lectus id eu id. Ornare nunc ipsum tristique
               habitasse vel lacinia.
             </p>
-            <a href=""><button>Learn more</button></a>
+            <a href=""
+              ><button class="primary__button clickable">Learn more</button></a
+            >
           </div>
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      <address class="footer__content">
+        <div class="footer__contact">
+          <a href="tel:5402008732" class="footer__phone clickable"
+            >(540) 200-8732</a
+          >
+          <p>1982 William st. Fredericksburg, VA 22401</p>
+        </div>
+        <!-- TODO:Change to school email -->
+        <a
+          href="mailto: contact@duogloesthetics.com"
+          class="footer__email clickable"
+        >
+          contact@duogloesthetics.com
+        </a>
+        <div class="footer__socials">
+          <a href="">
+            <button class="socials__button">
+              <?xml version="1.0"?><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 50 50"
+                width="50px"
+                height="50px"
+              >
+                <path
+                  d="M 16 3 C 8.83 3 3 8.83 3 16 L 3 34 C 3 41.17 8.83 47 16 47 L 34 47 C 41.17 47 47 41.17 47 34 L 47 16 C 47 8.83 41.17 3 34 3 L 16 3 z M 37 11 C 38.1 11 39 11.9 39 13 C 39 14.1 38.1 15 37 15 C 35.9 15 35 14.1 35 13 C 35 11.9 35.9 11 37 11 z M 25 14 C 31.07 14 36 18.93 36 25 C 36 31.07 31.07 36 25 36 C 18.93 36 14 31.07 14 25 C 14 18.93 18.93 14 25 14 z M 25 16 C 20.04 16 16 20.04 16 25 C 16 29.96 20.04 34 25 34 C 29.96 34 34 29.96 34 25 C 34 20.04 29.96 16 25 16 z"
+                />
+              </svg>
+            </button>
+          </a>
+          <a href="">
+            <button class="socials__button">
+              <img
+                src="./images/socials/fb.svg"
+                alt="duogloestheticstraining facebook"
+              />
+            </button>
+          </a>
+          <a href="">
+            <button class="socials__button">
+              <img
+                src="./images/socials/tiktok.svg"
+                alt="duogloestheticstraining tiktok"
+              />
+            </button>
+          </a>
+        </div>
+      </address>
+    </footer>
   </body>
 </html>
