@@ -89,6 +89,7 @@ h6 {
   --accent: var(--gold);
   --gutter: 2rem;
   --padding: var(--gutter);
+  --content-width: 1200px;
 }
 
 /* Globals */
@@ -194,10 +195,37 @@ main {
 }
 
 .content {
-  max-width: 1200px;
+  max-width: var(--content-width);
   padding-inline: var(--gutter);
   margin-inline: auto;
 }
+
+/* Header */
+
+
+
+.nav__links {
+  display: flex;
+  justify-content: space-between;
+
+  max-width: var(--content-width);
+  padding: var(--padding);
+  margin-inline: auto;
+
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.nav__item {
+  all: unset;
+}
+
+.nav__item:hover {
+  all: unset;
+  color: var(--accent);
+}
+
 
 /* Hero */
 .hero {
@@ -253,7 +281,6 @@ main {
 }
 
 /* Footer */
-
 footer {
   background-color: var(--secondary-bg);
 }
@@ -261,11 +288,11 @@ footer {
 .footer__content {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1200px;
+  max-width: var(--content-width);
   justify-content: space-between;
   align-items: center;
 
-  margin-top: 4rem;
+  margin-top: 8rem;
   margin-inline: auto;
   padding: var(--padding);
 
