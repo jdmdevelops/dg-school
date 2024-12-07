@@ -149,12 +149,12 @@ address {
   font-style: normal;
 }
 
-.content span {
+/* .content span {
   color: var(--accent);
   font-weight: 600;
-}
+} */
 
-/* Utilty */
+/* Utility */
 .card {
   display: flex;
   flex-direction: column;
@@ -169,12 +169,11 @@ address {
 .card__img {
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  height: 200px;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
-.card > * {
+.card__content {
+  display: grid;
+  gap: var(--gutter);
   padding-inline: var(--padding);
 }
 
@@ -205,6 +204,11 @@ address {
 
 .sr-only {
   display: none;
+}
+
+.accent {
+  color: var(--accent);
+  font-weight: 600;
 }
 
 /* Page */
@@ -247,20 +251,20 @@ main {
 
 @media (max-width: 600px) {
   .nav__links {
-    flex-direction: column;
     position: fixed;
+    top: -300px;
+    flex-direction: column;
     gap: 1rem;
     padding-top: 5rem;
     z-index: 1000;
     background: var(--main-bg);
     width: 100%;
 
-    transform: translateY(-100%);
     transition: transform .5s ease-in-out;
   }
 
   .nav__links[data-visible="true"] {
-    transform: translateY(0);
+    transform: translateY(100%);
     transition: transform .5s ease-in-out;
   }
   
@@ -343,30 +347,16 @@ main {
 }
 
 /* Intro */
-.intro__title span {
-  color: var(--accent);
-  font-weight: 600;
-}
 
-.intro p {
-  /* background-color: var(--accent); */
-}
 
 /* Why */
-.why span {
-  color: #977a1c;
-  font-weight: 600;
-}
+
 
 /* Offerings */
 .offerings__container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
   gap: var(--gutter);
-}
-
-.offerings__esthetics .card__img {
-  background-image: url('../images/course1.png');
 }
 
 .offerings__master .card__img {
@@ -383,9 +373,11 @@ footer {
 .footer__inner {
   display: flex;
   flex-wrap: wrap;
-  max-width: var(--content-width);
   justify-content: space-between;
   align-items: center;
+  gap: .75rem;
+
+  max-width: var(--content-width);
   margin-top: 8rem;
   margin-inline: auto;
   padding: var(--padding);
@@ -404,15 +396,15 @@ footer {
   gap: 0.5rem;
 }
 
-.socials__button {
+.social__link {
   cursor: pointer;
-}
 
-.socials__button > * {
-  width: 32px;
-  height: 32px;
-}
-
-.socials__button > *:hover {
-  fill: var(--accent);
+  svg {
+    width: 32px;
+    height: 32px;
+  }
+  
+  svg:hover {
+    fill: var(--accent);
+  }
 }
