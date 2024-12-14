@@ -8,8 +8,8 @@ navLinks.forEach((link) => {
   console.log(link.id)
 
   if (currentUrl.includes(link.id)) {
-    link.classList.add('unclickable')
     link.classList.add('nav__link--active')
+    link.classList.add('unclickable')
     link.href = ''
   }
 })
