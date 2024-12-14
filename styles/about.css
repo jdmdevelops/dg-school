@@ -1,0 +1,7 @@
+.whitespace {
+    height: 100px;
+}
+
+.hero__title {
+    padding: var(--padding);
+}
