@@ -1,14 +1,27 @@
-const navLinks = document.querySelector('.nav__links')
+const nav = document.querySelector('.nav')
 const navToggle = document.querySelector('.mobile-toggle')
+const navLinks = document.querySelectorAll('.nav__link')
+
+const currentUrl = window.location.href
+navLinks.forEach((link) => {
+  console.log(currentUrl)
+  console.log(link.id)
+
+  if (currentUrl.includes(link.id)) {
+    link.classList.add('unclickable')
+    link.classList.add('nav__link--active')
+    link.href = ''
+  }
+})
 
 navToggle.addEventListener('click', () => {
-  const visible = navLinks.getAttribute('data-visible')
+  const visible = nav.getAttribute('data-visible')
 
   if (visible === 'false') {
-    navLinks.setAttribute('data-visible', true)
+    nav.setAttribute('data-visible', true)
     navToggle.setAttribute('aria-expanded', true)
   } else if (visible === 'true') {
-    navLinks.setAttribute('data-visible', false)
+    nav.setAttribute('data-visible', false)
     navToggle.setAttribute('aria-expanded', false)
   }
 

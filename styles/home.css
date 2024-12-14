@@ -1,0 +1,36 @@
+/* Hero */
+.hero {
+    background-color: #e4e2ddcd;
+    background-image: url('../images/hero-bg.png');
+    background-size: cover;
+    background-blend-mode: soft-light;
+  
+    display: grid;
+    justify-items: center;
+  }
+  
+  .hero__logo {
+    padding-top: 4rem;
+  }
+  
+  .hero__title {
+    padding: var(--padding);
+    font-size: 4em;
+  }
+  
+  /* Intro */
+
+  /* Why */
+  
+  /* Offerings */
+  .offerings__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    gap: var(--gutter);
+  }
+  
+  .offerings__master .card__img {
+    /* background-color: #fde79e; */
+    background-image: url('../images/course2.png');
+    /* background-blend-mode: multiply; */
+  }
