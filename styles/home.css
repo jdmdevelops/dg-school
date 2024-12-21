@@ -1,6 +1,6 @@
 /* Hero */
 .hero {
-    background-color: #e4e2ddcd;
+    background-color: #e4e2ddf3;
     background-image: url('../images/hero-bg.png');
     background-size: cover;
     background-blend-mode: soft-light;
@@ -10,7 +10,6 @@
   }
   
   .hero__logo {
-    padding-top: 4rem;
   }
   
   .hero__title {
