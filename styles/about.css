@@ -1,24 +1,15 @@
 .hero {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    background-image: url('../images/school-beds.png');
+    background-size: cover;
+    background-color: #e4e2ddf1;
+    background-blend-mode: soft-light;
 }
 
-.hero__left {
-    flex: 2;
+.meet {
+    display: grid;
+    gap: var(--gutter);
 }
 
-.hero__right {
-    flex: 1;
-}
-
-
-.image {
-    width: 325px;
-    height: 325px;
-    background-color: burlywood;
-}
 
 .instructors {
     display: flex;
@@ -28,9 +19,10 @@
 
 .instructor__image {
     flex: 1;
-    width: 325px;
-    height: 325px;
-    background-color: burlywood;
+    border-radius: 10px;
+
+    min-width: 300px;
+
 }
 
 .instructor {

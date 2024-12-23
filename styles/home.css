@@ -1,19 +1,16 @@
 /* Hero */
 .hero {
-    background-color: #e4e2ddf3;
-    background-image: url('../images/hero-bg.png');
-    background-size: cover;
-    background-blend-mode: soft-light;
-  
+
+  background-image: url('../images/outside-spa.jpg');    
+  background-size: cover;
+  background-color: #e4e2ddf1;
+  background-blend-mode: soft-light;
+    
+  }
+
+  .hero__content {
     display: grid;
     justify-items: center;
-  }
-  
-  .hero__logo {
-  }
-  
-  .hero__title {
-    padding: var(--padding);
   }
   
   /* Intro */
