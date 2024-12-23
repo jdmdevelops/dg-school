@@ -1,31 +1,29 @@
 /* Hero */
 .hero {
+    background-image: url('../images/outside-spa.jpg');
+    background-size: cover;
+    background-color: #e4e2ddf1;
+    background-blend-mode: soft-light;
+}
 
-  background-image: url('../images/outside-spa.jpg');    
-  background-size: cover;
-  background-color: #e4e2ddf1;
-  background-blend-mode: soft-light;
-    
-  }
-
-  .hero__content {
+.hero__content {
     display: grid;
     justify-items: center;
-  }
-  
-  /* Intro */
+}
 
-  /* Why */
-  
-  /* Offerings */
-  .offerings__container {
+/* Intro */
+
+/* Why */
+
+/* Offerings */
+.offerings__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
     gap: var(--gutter);
-  }
-  
-  .offerings__master .card__img {
+}
+
+.offerings__master .card__img {
     /* background-color: #fde79e; */
     background-image: url('../images/course2.png');
     /* background-blend-mode: multiply; */
-  }
+}

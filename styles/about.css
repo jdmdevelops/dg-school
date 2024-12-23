@@ -10,19 +10,16 @@
     gap: var(--gutter);
 }
 
-
 .instructors {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--gutter)
+    gap: var(--gutter);
 }
 
 .instructor__image {
     flex: 1;
     border-radius: 10px;
-
     min-width: 300px;
-
 }
 
 .instructor {
@@ -30,6 +27,3 @@
     display: grid;
     gap: 1.5rem;
 }
-
-
-
