@@ -88,6 +88,7 @@ h6 {
     /* Colors */
     --main-bg: var(--beige-200);
     --secondary-bg: var(--beige-400);
+    --tertiary-bg: var(--beige-500);
     --main-text: var(--black);
     --accent: var(--gold);
     --border-dk: var(--black);
@@ -224,8 +225,6 @@ address {
 
 /* Page */
 main {
-    display: grid;
-    gap: 6rem;
 }
 
 .content {

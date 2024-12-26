@@ -1,29 +1,29 @@
 .hero {
-    background-image: url('../images/school-beds.png');
-    background-size: cover;
-    background-color: #e4e2ddf1;
-    background-blend-mode: soft-light;
+  background-image: url('../images/school-beds.png');
+  background-size: cover;
+  background-color: #e4e2ddf1;
+  background-blend-mode: soft-light;
 }
 
 .meet {
-    display: grid;
-    gap: var(--gutter);
+  padding-top: 6rem;
+  padding-bottom: 8rem;
 }
 
 .instructors {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--gutter);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gutter);
 }
 
 .instructor__image {
-    flex: 1;
-    border-radius: 10px;
-    min-width: 300px;
+  flex: 1;
+  border-radius: 10px;
+  min-width: 300px;
 }
 
 .instructor {
-    flex: 1;
-    display: grid;
-    gap: 1.5rem;
+  flex: 1;
+  display: grid;
+  gap: 1.5rem;
 }

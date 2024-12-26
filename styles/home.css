@@ -12,10 +12,31 @@
 }
 
 /* Intro */
+.intro {
+    background-repeat: no-repeat;
+    padding-top: 6rem;
+    padding-bottom: 2%;
+}
 
 /* Why */
+.why {
+    padding-top: 12%;
+    padding-bottom: 2%;
+    background-color: var(--secondary-bg);
+    background-image: url('../images/wavy-steps-1.svg');
+    background-repeat: no-repeat;
+}
 
 /* Offerings */
+
+.offerings {
+    padding-top: 12%;
+    padding-bottom: 6rem;
+    background-color: var(--tertiary-bg);
+    background-image: url('../images/wavy-steps-2.svg');
+    background-repeat: no-repeat;
+}
+
 .offerings__container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
