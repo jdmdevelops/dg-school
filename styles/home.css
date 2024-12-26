@@ -1,50 +1,50 @@
 /* Hero */
 .hero {
-    background-image: url('../images/outside-spa.jpg');
-    background-size: cover;
-    background-color: #e4e2ddf1;
-    background-blend-mode: soft-light;
+  background-image: url('../images/outside-spa.jpg');
+  background-size: cover;
+  background-color: #e4e2ddf1;
+  background-blend-mode: soft-light;
 }
 
 .hero__content {
-    display: grid;
-    justify-items: center;
+  display: grid;
+  justify-items: center;
 }
 
 /* Intro */
 .intro {
-    background-repeat: no-repeat;
-    padding-top: 6rem;
-    padding-bottom: 2%;
+  background-repeat: no-repeat;
+  padding-top: 6rem;
+  padding-bottom: 3rem;
 }
 
 /* Why */
 .why {
-    padding-top: 12%;
-    padding-bottom: 2%;
-    background-color: var(--secondary-bg);
-    background-image: url('../images/wavy-steps-1.svg');
-    background-repeat: no-repeat;
+  padding-top: clamp(6rem, 3.5652rem + 12.1739vw, 13rem);
+  padding-bottom: 3rem;
+  background-color: var(--secondary-bg);
+  background-image: url('../images/wavy-steps-1.svg');
+  background-repeat: no-repeat;
 }
 
 /* Offerings */
 
 .offerings {
-    padding-top: 12%;
-    padding-bottom: 6rem;
-    background-color: var(--tertiary-bg);
-    background-image: url('../images/wavy-steps-2.svg');
-    background-repeat: no-repeat;
+  padding-top: clamp(6rem, 3.5652rem + 12.1739vw, 13rem);
+  padding-bottom: 6rem;
+  background-color: var(--tertiary-bg);
+  background-image: url('../images/wavy-steps-2.svg');
+  background-repeat: no-repeat;
 }
 
 .offerings__container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
-    gap: var(--gutter);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+  gap: var(--gutter);
 }
 
 .offerings__master .card__img {
-    /* background-color: #fde79e; */
-    background-image: url('../images/course2.png');
-    /* background-blend-mode: multiply; */
+  /* background-color: #fde79e; */
+  background-image: url('../images/course2.png');
+  /* background-blend-mode: multiply; */
 }
