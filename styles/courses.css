@@ -1,0 +1,89 @@
+hr {
+  margin: 4rem 0;
+  height: 5px;
+  background-color: var(--accent);
+  border-radius: 10px;
+  border: none;
+}
+
+.title {
+  background-image: url('../images/courses-title-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #e4e2dd9d;
+  background-blend-mode: soft-light;
+}
+
+.flexible {
+  padding-bottom: 3rem;
+  padding-top: 6rem;
+}
+
+.courses {
+  padding-top: clamp(6rem, 3.5652rem + 12.1739vw, 13rem);
+  padding-bottom: 3rem;
+  background-color: var(--secondary-bg);
+  background-repeat: no-repeat;
+  background-image: url('../images/wavy-steps-1.svg');
+}
+
+.courses__header {
+  margin-bottom: 2rem;
+}
+
+.esthetics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gutter);
+}
+
+.esthetics__left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter);
+  max-width: 600px;
+}
+
+.esthetics__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.esthetics__right {
+  flex: 1;
+
+  img {
+    border-radius: 10px;
+  }
+}
+
+.masters {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  gap: var(--gutter);
+
+  margin-bottom: 6rem;
+}
+
+.masters__left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gutter);
+  max-width: 600px;
+}
+
+.masters__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.masters__right {
+  flex: 1;
+
+  img {
+    border-radius: 10px;
+  }
+}
