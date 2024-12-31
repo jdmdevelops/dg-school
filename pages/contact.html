@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About</title>
+    <title>Connect</title>
     <script src="../nav.js" defer></script>
     <link rel="stylesheet" href="../styles/styles.css" />
-    <link rel="stylesheet" href="../styles/about.css" />
+    <link rel="stylesheet" href="../styles/contact.css" />
   </head>
   <body>
     <header>
@@ -30,61 +30,107 @@
             <a id="courses" class="nav__link" href="./courses.html">Courses</a>
           </li>
           <li class="nav__item">
-            <a id="contact" class="nav__link" href="../pages/contact.html">Connect</a>
+            <a id="contact" class="nav__link" href="../pages/contact.html"
+              >Connect</a
+            >
           </li>
         </ul>
       </nav>
     </header>
     <main>
-      <section class="hero">
-
+      <section class="title">
         <div class="whitespace"></div>
-        
-          <div class="hero__ content content">
-            <h1 class="hero__title">The DuoGlo Difference</h1>
-            <h5 class="">
-              Our founders, Mimi and Kaelie, saw a severe lack of comprehensive
-              education in their beloved field of esthetics, and set out to make a
-              difference. At DuoGlo Esethetics training, our goal is to prepare
-              you not only for your state board exams, but for a
-              <span class="accent">lasting</span> and
-              <span class="accent">fulfilling</span> career in esthetics.
-            </h5>
-          </div>
-
-          <div class="whitespace"></div>
-        
-      
+        <h1 class="content">Start your esthetics career with us today!</h1>
+        <div class="whitespace"></div>
       </section>
 
-      <section class="meet content">
-        <h2 class="meet__header">Meet Your <span class="accent">Instructors</span></h2>
-        <div class="instructors">
-          <div class="instructor">
-            <img class="instructor__image" src="../images/mimi.jpg"></img>
-              <div>
-                <h3>Mimi Abed</h3>
-                <h4 class="accent">Master Esthetician & Instructor</h4>
-              </div>
-              <p>
-                Mimi has an impeccable eye for detail that portrays itself in everything she does. She is passionate about all things beauty, and loves to express her creativity with facials, lash lifts and tints, eyebrow waxing and lamination, and social media content. Mimi found her love for esthetics and education as a child, and always knew it was her dream career. When she’s not teaching, she enjoys shopping, traveling, spending time with family, and city life.
-              </p>
-          </div>
-          <div class="instructor">
-            <img class="instructor__image" src="../images/kael.jpg"></img>
-        
-            <div>
-              <h3>Kaelie haynie</h3>
-              <h4 class="accent">Master Esthetician & Instructor</h4>
-            </div>
+      <section class="inquiry content">
+        <div class="inquiry__container">
+          <div class="inquiry__header">
+            <h2>Training inquiry</h2>
             <p>
-              Always a lover of science and beauty, Kaelie found her perfect career in esthetics, where her two passions meld together seamlessly. She is passionate about medical-grade skincare providing clinically-tested results, and loves creating customized plans of action to get a client to their best skin yet. When she’s not teaching, she enjoys swing dancing, nature walks, and spending time with her golden retriever, Aubree.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
+              commodi itaque dicta accusantium natus architecto expedita
+              mollitia tempora, hic harum laudantium perspiciatis ab earum
+              soluta ad id reprehenderit, recusandae iusto?
             </p>
+          </div>
+          <form action="" method="post" class="inquiry__form">
+            <div class="form__item">
+              <label for="name">Full Name</label>
+              <input type="text" name="name" id="name" required />
+            </div>
+            <div class="form__item">
+              <label for="dob">Date of Birth</label>
+              <input type="date" name="dob" id="dob" required />
+            </div>
+            <div class="form__item">
+              <label for="email">Email Address</label>
+              <input type="email" name="email" id="email" required />
+            </div>
+            <div class="form__item">
+              <label for="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                required
+              />
+            </div>
+            <fieldset class="form__item">
+              <legend>Preferred Contact Method</legend>
+              <div>
+                <input
+                  type="radio"
+                  id="pref-phone"
+                  name="contact-pref"
+                  value="phone"
+                />
+                <label for="pref-phone">Phone</label>
+                <input
+                  type="radio"
+                  id="pref-email"
+                  name="contact-pref"
+                  value="email"
+                />
+                <label for="pref-email">Email</label>
+              </div>
+            </fieldset>
+            <div class="form__item">
+              <label for="highest-edu"
+                >Highest Level of Education Completed</label
+              >
+              <input type="text" name="highest-edu" id="highest-edu" required />
+            </div>
+            <fieldset class="form__item">
+              <legend>Which Course Are You Interested In?</legend>
+              <div>
+                <input
+                  type="radio"
+                  id="esthetics"
+                  name="course-sel"
+                  value="esthetics"
+                />
+                <label for="esthetics">Esthetics</label>
+                <input
+                  type="radio"
+                  id="master-esthetics"
+                  name="course-sel"
+                  value="master-esthetics"
+                />
+                <label for="master-esthetics"
+                  >Master Esthetics (Esthetics is a prerequisite)</label
+                >
+              </div>
+            </fieldset>
+            <div class="form__submit">
+              <input type="submit" value="Submit" />
+            </div>
+          </form>
         </div>
       </section>
-
     </main>
-
     <footer>
       <div class="footer__inner">
         <a href="tel:5402008732" class="footer__phone clickable"
