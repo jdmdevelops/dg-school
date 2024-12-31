@@ -47,7 +47,7 @@
       <section class="inquiry content">
         <div class="inquiry__container">
           <div class="inquiry__header">
-            <h2>Training inquiry</h2>
+            <h2>Training <span class="accent">inquiry</span></h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis
               commodi itaque dicta accusantium natus architecto expedita
@@ -57,20 +57,27 @@
           </div>
           <form action="" method="post" class="inquiry__form">
             <div class="form__item">
-              <label for="name">Full Name</label>
-              <input type="text" name="name" id="name" required />
+              <label for="name" class="block">Full Name</label>
+              <input class="input" type="text" name="name" id="name" required />
             </div>
             <div class="form__item">
-              <label for="dob">Date of Birth</label>
-              <input type="date" name="dob" id="dob" required />
+              <label for="dob" class="block">Date of Birth</label>
+              <input class="input" type="date" name="dob" id="dob" required />
             </div>
             <div class="form__item">
-              <label for="email">Email Address</label>
-              <input type="email" name="email" id="email" required />
-            </div>
-            <div class="form__item">
-              <label for="phone">Phone Number</label>
+              <label for="email" class="block">Email Address</label>
               <input
+                class="input"
+                type="email"
+                name="email"
+                id="email"
+                required
+              />
+            </div>
+            <div class="form__item">
+              <label for="phone" class="block">Phone Number</label>
+              <input
+                class="input"
                 type="tel"
                 id="phone"
                 name="phone"
@@ -78,10 +85,11 @@
                 required
               />
             </div>
-            <fieldset class="form__item">
+            <fieldset class="form__item radio-group">
               <legend>Preferred Contact Method</legend>
               <div>
                 <input
+                  class="radio"
                   type="radio"
                   id="pref-phone"
                   name="contact-pref"
@@ -89,6 +97,7 @@
                 />
                 <label for="pref-phone">Phone</label>
                 <input
+                  class="radio"
                   type="radio"
                   id="pref-email"
                   name="contact-pref"
@@ -98,15 +107,22 @@
               </div>
             </fieldset>
             <div class="form__item">
-              <label for="highest-edu"
+              <label for="highest-edu" class="block"
                 >Highest Level of Education Completed</label
               >
-              <input type="text" name="highest-edu" id="highest-edu" required />
+              <input
+                class="input"
+                type="text"
+                name="highest-edu"
+                id="highest-edu"
+                required
+              />
             </div>
-            <fieldset class="form__item">
+            <fieldset class="form__item radio-group">
               <legend>Which Course Are You Interested In?</legend>
               <div>
                 <input
+                  class="radio"
                   type="radio"
                   id="esthetics"
                   name="course-sel"
@@ -114,6 +130,7 @@
                 />
                 <label for="esthetics">Esthetics</label>
                 <input
+                  class="radio"
                   type="radio"
                   id="master-esthetics"
                   name="course-sel"
@@ -125,7 +142,11 @@
               </div>
             </fieldset>
             <div class="form__submit">
-              <input type="submit" value="Submit" />
+              <input
+                type="submit"
+                value="Submit"
+                class="primary__button clickable"
+              />
             </div>
           </form>
         </div>

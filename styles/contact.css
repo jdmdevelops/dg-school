@@ -5,3 +5,58 @@
   background-color: #e4e2dd9d;
   background-blend-mode: soft-light;
 }
+
+.inquiry__container {
+  --padding-outer: 1rem;
+  --padding-inner: 2rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  padding: var(--padding-outer);
+  margin: 4rem 0;
+  background-color: var(--secondary-bg);
+  border-radius: var(--main-br);
+}
+
+.inquiry__header {
+  flex: 1;
+  padding: var(--padding-inner);
+  background-color: var(--tertiary-bg);
+  border-radius: var(--main-br);
+}
+
+.inquiry__form {
+  flex: 2;
+  display: grid;
+
+  padding: var(--padding-inner);
+  gap: 1.25rem;
+}
+
+.block {
+  display: block;
+}
+
+.input {
+  border: none;
+  border-radius: 5px;
+  background-color: var(--lightest);
+  padding: 0.5rem;
+
+  &:focus-visible {
+    outline: 2px var(--accent) solid;
+  }
+}
+
+.radio-group {
+  border: 2px var(--border-dk) solid;
+  border-radius: var(--main-br);
+
+  &:focus-within {
+    border-color: var(--accent);
+  }
+}
+
+.radio {
+  accent-color: var(--accent);
+}
