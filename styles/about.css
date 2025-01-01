@@ -1,13 +1,17 @@
-.hero {
+.title {
   background-image: url('../images/school-beds.png');
   background-size: cover;
   background-color: #e4e2ddf1;
   background-blend-mode: soft-light;
 }
 
+.story {
+  padding-top: var(--fluid-space-y);
+}
+
 .meet {
-  padding-top: 3rem;
-  padding-bottom: 8rem;
+  background-color: var(--secondary-bg);
+  padding-bottom: var(--fluid-space-y);
 }
 
 .instructors {

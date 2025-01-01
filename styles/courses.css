@@ -15,20 +15,16 @@ hr {
 }
 
 .flexible {
-  padding-bottom: 3rem;
-  padding-top: 3rem;
+  padding-top: var(--fluid-space-y);
 }
 
 .courses {
-  padding-top: clamp(6rem, 3.5652rem + 12.1739vw, 13rem);
-  padding-bottom: 3rem;
   background-color: var(--secondary-bg);
-  background-repeat: no-repeat;
-  background-image: url('../images/wavy-steps-1.svg');
+  padding-bottom: var(--fluid-space-y);
 }
 
 .courses__header {
-  margin-bottom: 2rem;
+  margin-bottom: var(--fluid-space-y);
 }
 
 .esthetics {
@@ -63,8 +59,6 @@ hr {
   flex-direction: row-reverse;
   flex-wrap: wrap;
   gap: var(--gutter);
-
-  margin-bottom: 6rem;
 }
 
 .masters__left {

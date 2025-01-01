@@ -98,6 +98,8 @@ h6 {
   /* Spacing */
   --gutter: 2rem;
   --padding: var(--gutter);
+  --fluid-space-y: clamp(3rem, 2.5185rem + 1.9753vw, 4rem);
+  --white-space: clamp(6rem, 5.037rem + 3.9506vw, 8rem);
   --content-width: 1200px;
 
   /* Other */
@@ -200,7 +202,24 @@ address {
 
 .whitespace {
   width: 100%;
-  height: 8rem;
+  height: var(--white-space);
+}
+
+.divider {
+  width: 100%;
+  height: var(--white-space);
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.divider--secondary {
+  background-image: url('../images/wavy-steps-1.svg');
+  background-color: var(--secondary-bg);
+}
+
+.divider--tertiary {
+  background-image: url('../images/wavy-steps-2.svg');
+  background-color: var(--tertiary-bg);
 }
 
 .card__img {
@@ -224,8 +243,6 @@ address {
 }
 
 /* Page */
-main {
-}
 
 .content {
   max-width: var(--content-width);
