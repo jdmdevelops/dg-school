@@ -1,5 +1,5 @@
 hr {
-  margin: 4rem 0;
+  margin: var(--fluid-space-y) 0;
   height: 5px;
   background-color: var(--accent);
   border-radius: 10px;
@@ -31,6 +31,10 @@ hr {
   display: flex;
   flex-wrap: wrap;
   gap: var(--gutter);
+}
+
+.cta {
+  margin-top: var(--gutter);
 }
 
 .esthetics__left {

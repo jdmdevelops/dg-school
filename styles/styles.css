@@ -173,7 +173,7 @@ address {
   color: var(--accent);
 }
 
-.primary__button {
+.button--primary {
   cursor: pointer;
   padding: 1rem;
   background: transparent;

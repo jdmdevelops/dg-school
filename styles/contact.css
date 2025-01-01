@@ -20,8 +20,12 @@
 
 .inquiry__header {
   flex: 1;
+  min-height: 450px;
   padding: var(--padding-inner);
   background-color: var(--tertiary-bg);
+  background-image: url('../images/contact-header-bg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
   border-radius: var(--main-br);
 }
 
@@ -49,12 +53,7 @@
 }
 
 .radio-group {
-  border: 2px var(--border-dk) solid;
-  border-radius: var(--main-br);
-
-  &:focus-within {
-    border-color: var(--accent);
-  }
+  all: unset;
 }
 
 .radio {
