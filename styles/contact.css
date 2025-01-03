@@ -38,7 +38,7 @@
 }
 
 .inquiry__submit {
-  -webkit-appearance: none;
+  -webkit-text-fill-color: unset;
 }
 
 .block {
