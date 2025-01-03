@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Connect</title>
     <script src="../nav.js" defer></script>
+    <script
+      data-cfasync="false"
+      type="text/javascript"
+      src="../form-submission-handler.js"
+    ></script>
+
     <link rel="stylesheet" href="../styles/styles.css" />
     <link rel="stylesheet" href="../styles/contact.css" />
   </head>
@@ -55,7 +61,11 @@
             </p>
           </div>
 
-          <form action="" method="post" class="inquiry__form">
+          <form
+            action="https://script.google.com/macros/s/AKfycbwyDmUlC6buzsRSGoXTGVmKql00mE4rDEmMKDI3yhrI3Kt1ET-l6isx-j46ewve-5o0/exec"
+            method="POST"
+            class="gform inquiry__form"
+          >
             <div class="form__item">
               <label for="name" class="block">Full Name</label>
               <input class="input" type="text" name="name" id="name" required />
@@ -71,6 +81,7 @@
                 type="email"
                 name="email"
                 id="email"
+                placeholder="sample@test.com"
                 required
               />
             </div>
@@ -82,6 +93,7 @@
                 id="phone"
                 name="phone"
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                placeholder="000-000-0000"
                 required
               />
             </div>
@@ -94,6 +106,7 @@
                   id="pref-phone"
                   name="contact-pref"
                   value="phone"
+                  required
                 />
                 <label for="pref-phone">Phone</label>
                 <input
@@ -102,6 +115,7 @@
                   id="pref-email"
                   name="contact-pref"
                   value="email"
+                  required
                 />
                 <label for="pref-email">Email</label>
               </div>
@@ -127,6 +141,7 @@
                   id="esthetics"
                   name="course-sel"
                   value="esthetics"
+                  required
                 />
                 <label for="esthetics">Esthetics</label>
                 <input
@@ -135,13 +150,14 @@
                   id="master-esthetics"
                   name="course-sel"
                   value="master-esthetics"
+                  required
                 />
                 <label for="master-esthetics"
                   >Master Esthetics (Esthetics is a prerequisite)</label
                 >
               </div>
             </fieldset>
-            <div class="form__submit">
+            <div id="submit" class="form__submit">
               <input
                 type="submit"
                 value="Submit"
@@ -151,6 +167,31 @@
           </form>
         </div>
       </section>
+
+      <dialog id="success" class="modal">
+        <h2 class="modal__title">
+          Inquiry <span class="accent">received!</span>
+        </h2>
+        <p class="modal__body">
+          We will reach out regarding next steps, thank you for contacting us!
+        </p>
+        <form method="dialog">
+          <button class="modal__close button--primary clickable">Close</button>
+        </form>
+      </dialog>
+
+      <dialog id="fail" class="modal">
+        <h2 class="modal__title">
+          Submission <span class="accent">failed</span>
+        </h2>
+        <p class="modal__body">
+          We apologize for the inconvenience. Please reach out to us directly at
+          training@duogloesthetics.com
+        </p>
+        <form method="dialog">
+          <button class="modal__close button--primary clickable">Close</button>
+        </form>
+      </dialog>
     </main>
     <footer>
       <div class="footer__inner">
@@ -161,10 +202,10 @@
 
         <!-- TODO:Change to school email -->
         <a
-          href="mailto: contact@duogloesthetics.com"
+          href="mailto: training@duogloesthetics.com"
           class="footer__email clickable"
         >
-          contact@duogloesthetics.com
+          training@duogloesthetics.com
         </a>
         <div class="footer__socials">
           <a href="" class="social__link">

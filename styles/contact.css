@@ -59,3 +59,19 @@
 .radio {
   accent-color: var(--accent);
 }
+
+.modal {
+  margin: auto auto;
+  padding: var(--padding);
+  background-color: var(--tertiary-bg);
+  border: none;
+  border-radius: var(--main-br);
+
+  &::backdrop {
+    background-color: #e4e2ddb9;
+  }
+}
+
+.modal__close {
+  margin-top: 1.25rem;
+}
