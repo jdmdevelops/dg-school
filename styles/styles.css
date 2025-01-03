@@ -154,10 +154,6 @@ button {
   all: unset;
 }
 
-form {
-  -webkit-appearance: none;
-}
-
 address {
   font-style: normal;
 }

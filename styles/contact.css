@@ -37,6 +37,10 @@
   gap: 1.25rem;
 }
 
+.inquiry__submit {
+  -webkit-appearance: none;
+}
+
 .block {
   display: block;
 }
