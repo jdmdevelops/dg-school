@@ -55,6 +55,7 @@ hr {
 
   img {
     border-radius: 10px;
+    min-width: 325px;
   }
 }
 
@@ -83,5 +84,6 @@ hr {
 
   img {
     border-radius: 10px;
+    min-width: 325px;
   }
 }
