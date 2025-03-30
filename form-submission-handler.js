@@ -28,6 +28,9 @@
     fields.forEach(function (name) {
       var element = elements[name]
 
+
+      if(!element.value) return
+
       // singular form elements just have one value
       formData[name] = element.value
 
