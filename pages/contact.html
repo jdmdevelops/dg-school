@@ -8,7 +8,7 @@
     <script
       data-cfasync="false"
       type="text/javascript"
-      src="../form-submission-handler.js"
+      src="../submit.js"
     ></script>
 
     <link rel="stylesheet" href="../styles/styles.css" />
@@ -62,11 +62,12 @@
           </div>
 
           <form
-            action="https://script.google.com/macros/s/AKfycbwyDmUlC6buzsRSGoXTGVmKql00mE4rDEmMKDI3yhrI3Kt1ET-l6isx-j46ewve-5o0/exec"
+            action="https://script.google.com/macros/s/AKfycbyklYEdUErgmpaq222KDMXbj4eiAepJ0Y0-x64pLkSuNVBFEnETs3TznK1FlJ2pqR3M/exec"
             method="POST"
             class="gform inquiry__form"
           >
           <input type="text" name="honeypot" style="display:none">
+          <input type="hidden" name="js_token" id="js_token" value="">
             <div class="form__item">
               <label for="name" class="block">Full Name</label>
               <input class="input" type="text" name="name" id="name" required />

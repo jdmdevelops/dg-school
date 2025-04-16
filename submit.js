@@ -4,6 +4,11 @@
     var elements = form.elements
     var honeypot
 
+    const jsToken = document.getElementById('js_token')
+    jsToken.value = btoa(Date.now() + '-' + Math.random().toString(36).substring(2))
+
+    
+
     var fields = Object.keys(elements)
       .filter(function (k) {
         if (elements[k].name === 'honeypot') {
