@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Connect</title>
-    <script src="../nav.js" defer></script>
+
     <script
       data-cfasync="false"
       type="text/javascript"
@@ -27,16 +27,19 @@
       <nav>
         <ul id="nav" data-visible="false" class="nav">
           <li class="nav__item">
-            <a id="index" class="nav__link" href="../index.html">Home</a>
+            <a id="index" class="nav__link" href="/">Home</a>
           </li>
           <li class="nav__item">
-            <a id="about" class="nav__link" href="./about.html">About</a>
+            <a id="about" class="nav__link" href="/about">About</a>
           </li>
           <li class="nav__item">
-            <a id="courses" class="nav__link" href="./courses.html">Courses</a>
+            <a id="courses" class="nav__link" href="/courses">Courses</a>
           </li>
           <li class="nav__item">
-            <a id="contact" class="nav__link" href="../pages/contact.html"
+            <a
+              id="contact"
+              class="nav__link--active unclickable"
+              href="/contact"
               >Connect</a
             >
           </li>
@@ -66,8 +69,8 @@
             method="POST"
             class="gform inquiry__form"
           >
-          <input type="text" name="honeypot" style="display:none">
-          <input type="hidden" name="js_token" id="js_token" value="">
+            <input type="text" name="honeypot" style="display: none" />
+            <input type="hidden" name="js_token" id="js_token" value="" />
             <div class="form__item">
               <label for="name" class="block">Full Name</label>
               <input class="input" type="text" name="name" id="name" required />
