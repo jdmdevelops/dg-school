@@ -331,7 +331,7 @@ address {
     height: 0.2rem;
     width: 80%;
     border-radius: var(--main-br);
-    background-color: var(--main-text);
+    background-color: var(--accent);
 
     transition: transform 0.5s ease-in-out;
   }
@@ -340,7 +340,7 @@ address {
     height: 0.2rem;
     width: 80%;
     border-radius: var(--main-br);
-    background-color: var(--main-text);
+    background-color: var(--accent);
 
     transition: transform 0.5s ease-in-out;
   }
