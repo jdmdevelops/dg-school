@@ -2,8 +2,8 @@
 .hero {
   background-image: url('../images/outside-spa.jpg');
   background-size: cover;
-  background-color: #e4e2ddf1;
-  background-blend-mode: soft-light;
+  background-color: rgba(0, 0, 0, 0.5); /* darkness level */
+  background-blend-mode: multiply;
 }
 
 .hero__content {

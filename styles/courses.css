@@ -10,8 +10,8 @@ hr {
   background-image: url('../images/courses-title-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #e4e2dd9d;
-  background-blend-mode: soft-light;
+  background-color: rgba(0, 0, 0, 0.5); /* darkness level */
+  background-blend-mode: multiply;
 }
 
 .flexible {
@@ -21,10 +21,6 @@ hr {
 .courses {
   background-color: var(--secondary-bg);
   padding-bottom: var(--fluid-space-y);
-}
-
-.courses__header {
-  margin-bottom: var(--fluid-space-y);
 }
 
 .esthetics {
