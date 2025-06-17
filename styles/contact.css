@@ -2,8 +2,8 @@
   background-image: url('../images/contact-title-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #e4e2dd9d;
-  background-blend-mode: soft-light;
+  background-color: rgba(0, 0, 0, 0.5); /* darkness level */
+  background-blend-mode: multiply;
 }
 
 .inquiry__container {
