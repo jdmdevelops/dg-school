@@ -5,9 +5,9 @@
     var honeypot
 
     const jsToken = document.getElementById('js_token')
-    jsToken.value = btoa(Date.now() + '-' + Math.random().toString(36).substring(2))
-
-    
+    jsToken.value = btoa(
+      Date.now() + '-' + Math.random().toString(36).substring(2)
+    )
 
     var fields = Object.keys(elements)
       .filter(function (k) {
@@ -33,8 +33,7 @@
     fields.forEach(function (name) {
       var element = elements[name]
 
-
-      if(!element.value) return
+      if (!element.value) return
 
       // singular form elements just have one value
       formData[name] = element.value
@@ -76,24 +75,35 @@
       return false
     }
 
-    disableAllButtons(form)
+    // Disable submit button
+    const submitButton = form.querySelector('button[type="submit"]')
+    if (submitButton) {
+      submitButton.disabled = true
+      submitButton.classList.add('submitting')
+    }
+
     var url = form.action
     var xhr = new XMLHttpRequest()
-    xhr.open('POST', url)
-    // xhr.withCredentials = true;
+    xhr.open('POST', url, true)
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
     xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-        form.reset()
-        var formElements = form.querySelector('.form-elements')
-        if (formElements) {
-          formElements.style.display = 'none' // hide form
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          form.reset()
+          var formElements = form.querySelector('.form-elements')
+          if (formElements) {
+            formElements.style.display = 'none' // hide form
+          }
+          successModal.showModal()
+        } else {
+          console.log('Form submission failed with status:', xhr.status)
         }
-        successModal.showModal()
-      }
 
-      if (xhr.readyState === 4 && xhr.status !== 200) {
-        console.log('hit')
+        // Re-enable submit button after request completes (success or error)
+        if (submitButton) {
+          submitButton.disabled = false
+          submitButton.classList.remove('submitting')
+        }
       }
     }
     // url encode form data for sending as post data
@@ -113,11 +123,4 @@
     }
   }
   document.addEventListener('DOMContentLoaded', loaded, false)
-
-  function disableAllButtons(form) {
-    var buttons = form.querySelectorAll('button')
-    for (var i = 0; i < buttons.length; i++) {
-      buttons[i].disabled = true
-    }
-  }
 })()

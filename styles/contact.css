@@ -79,3 +79,33 @@
 .modal__close {
   margin-top: 1.25rem;
 }
+
+button[type='submit']:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+button[type='submit'].submitting {
+  position: relative;
+  padding-right: 2.5rem; /* Make space for the spinner */
+}
+
+button[type='submit'].submitting:after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  margin-top: -8px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
