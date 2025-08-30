@@ -1,5 +1,5 @@
 .title {
-  background-image: url('../images/contact-title-bg.jpg');
+  background-image: url('../images/connect-title-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.5); /* darkness level */
@@ -23,7 +23,7 @@
   min-height: 450px;
   padding: var(--padding-inner);
   background-color: var(--tertiary-bg);
-  background-image: url('../images/contact-header-bg.svg');
+  background-image: url('../images/connect-header-bg.svg');
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: var(--main-br);

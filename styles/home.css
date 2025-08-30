@@ -11,6 +11,21 @@
   justify-items: center;
 }
 
+.hero__title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.hero__cta {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.1em;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  color: var(--lightest);
+}
+
 /* Intro */
 .intro {
   padding-top: var(--fluid-space-y);
