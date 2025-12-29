@@ -70,8 +70,8 @@ h6 {
 
 /* Variables */
 @font-face {
-  font-family: 'Dream Avenue'; /*a name to be used later*/
-  src: url('../fonts/dream-avenue.ttf'); /*URL to font*/
+  font-family: "Dream Avenue"; /*a name to be used later*/
+  src: url("../fonts/dream-avenue.ttf"); /*URL to font*/
 }
 
 :root {
@@ -108,28 +108,29 @@ h6 {
 
   /* Other */
   --main-br: 15px;
-  --font: clamp(1.0063rem, 0.9424rem + 0.2556vw, 1.15rem);
+  --font: clamp(1.125rem, 1.0114rem + 0.303vw, 1.25rem);
+  /* ^ screen sizes 600-1260px */
 }
 
 /* Globals */
 body {
   background-color: var(--main-bg);
   color: var(--main-text);
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   margin: 0 auto;
 
   font-size: var(--font);
 }
 
 h1 {
-  font-family: 'Dream Avenue';
-  font-size: 4em;
+  font-family: "Dream Avenue";
+  font-size: 3.7em;
   font-weight: 400;
   color: var(--lightest);
 }
 
 h2 {
-  font-family: 'Dream Avenue';
+  font-family: "Dream Avenue";
   font-weight: 500;
   font-size: 2.5em;
   margin-bottom: 16px;
@@ -137,7 +138,7 @@ h2 {
 
 h3 {
   font-size: 1.25em;
-  letter-spacing: 0.4em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -220,6 +221,11 @@ address {
   }
 }
 
+.button--cta {
+  padding: 1.5rem;
+  font-size: 1.25em;
+}
+
 .sr-only {
   display: none;
 }
@@ -247,12 +253,12 @@ address {
 }
 
 .divider--secondary {
-  background-image: url('../images/wavy-steps-1.svg');
+  background-image: url("../images/wavy-steps-1.svg");
   background-color: var(--secondary-bg);
 }
 
 .divider--tertiary {
-  background-image: url('../images/wavy-steps-2.svg');
+  background-image: url("../images/wavy-steps-2.svg");
   background-color: var(--tertiary-bg);
 }
 
@@ -293,6 +299,7 @@ address {
   padding: var(--padding);
   margin-inline: auto;
 
+  font-size: 1.15em;
   letter-spacing: 0.4em;
   text-transform: uppercase;
   font-weight: 600;
@@ -330,7 +337,7 @@ address {
     transition: transform 0.5s ease-in-out;
   }
 
-  .nav[data-visible='true'] {
+  .nav[data-visible="true"] {
     transform: translateY(100%);
     transition: transform 0.5s ease-in-out;
   }
@@ -377,7 +384,7 @@ address {
     transition: transform 0.5s ease-in-out;
   }
 
-  .mobile-toggle[aria-expanded='true'] {
+  .mobile-toggle[aria-expanded="true"] {
     .inner__left {
       transform: rotate(-45deg) translate(-4px, 4px);
       transition: transform 0.5s ease-in-out;

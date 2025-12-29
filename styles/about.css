@@ -1,5 +1,5 @@
 .title {
-  background-image: url('../images/about-title.jpg');
+  background-image: url("../images/about-title.jpg");
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.5); /* darkness level */
   background-blend-mode: multiply;
@@ -17,7 +17,7 @@
 .instructors {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--gutter);
+  gap: 4rem;
 }
 
 .instructor__image {
