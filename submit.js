@@ -1,126 +1,126 @@
-;(function () {
+(function () {
   // get all data in form and return object
   function getFormData(form) {
-    var elements = form.elements
-    var honeypot
+    var elements = form.elements;
+    var honeypot;
 
-    const jsToken = document.getElementById('js_token')
+    const jsToken = document.getElementById("js_token");
     jsToken.value = btoa(
-      Date.now() + '-' + Math.random().toString(36).substring(2)
-    )
+      Date.now() + "-" + Math.random().toString(36).substring(2),
+    );
 
     var fields = Object.keys(elements)
       .filter(function (k) {
-        if (elements[k].name === 'honeypot') {
-          honeypot = elements[k].value
-          return false
+        if (elements[k].name === "honeypot") {
+          honeypot = elements[k].value;
+          return false;
         }
-        return true
+        return true;
       })
       .map(function (k) {
         if (elements[k].name !== undefined) {
-          return elements[k].name
+          return elements[k].name;
           // special case for Edge's html collection
         } else if (elements[k].length > 0) {
-          return elements[k].item(0).name
+          return elements[k].item(0).name;
         }
       })
       .filter(function (item, pos, self) {
-        return self.indexOf(item) == pos && item
-      })
+        return self.indexOf(item) == pos && item;
+      });
 
-    var formData = {}
+    var formData = {};
     fields.forEach(function (name) {
-      var element = elements[name]
+      var element = elements[name];
 
-      if (!element.value) return
+      if (!element.value) return;
 
       // singular form elements just have one value
-      formData[name] = element.value
+      formData[name] = element.value;
 
       // when our element has multiple items, get their values
       if (element.length) {
-        var data = []
+        var data = [];
         for (var i = 0; i < element.length; i++) {
-          var item = element.item(i)
+          var item = element.item(i);
           if (item.checked || item.selected) {
-            data.push(item.value)
+            data.push(item.value);
           }
         }
-        formData[name] = data.join(', ')
+        formData[name] = data.join(", ");
       }
-    })
+    });
 
     // add form-specific values into the data
-    formData.formDataNameOrder = JSON.stringify(fields)
-    formData.formGoogleSheetName = form.dataset.sheet || 'responses' // default sheet name
-    formData.formGoogleSendEmail = form.dataset.email || '' // no email by default
+    formData.formDataNameOrder = JSON.stringify(fields);
+    formData.formGoogleSheetName = form.dataset.sheet || "responses"; // default sheet name
+    formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
 
-    return { data: formData, honeypot: honeypot }
+    return { data: formData, honeypot: honeypot };
   }
 
   function handleFormSubmit(event) {
-    const successModal = document.getElementById('success')
-    const failModal = document.getElementById('fail')
+    const successModal = document.getElementById("success");
+    const failModal = document.getElementById("fail");
 
     // handles form submit without any jquery
-    event.preventDefault() // we are submitting via xhr below
+    event.preventDefault(); // we are submitting via xhr below
 
-    var form = event.target
-    var formData = getFormData(form)
-    var data = formData.data
+    var form = event.target;
+    var formData = getFormData(form);
+    var data = formData.data;
 
     // If a honeypot field is filled, assume it was done so by a spam bot.
     if (formData.honeypot) {
-      return false
+      return false;
     }
 
     // Disable submit button
-    const submitButton = form.querySelector('button[type="submit"]')
+    const submitButton = form.querySelector('button[type="submit"]');
     if (submitButton) {
-      submitButton.disabled = true
-      submitButton.classList.add('submitting')
+      submitButton.disabled = true;
+      submitButton.classList.add("submitting");
     }
 
-    var url = form.action
-    var xhr = new XMLHttpRequest()
-    xhr.open('POST', url, true)
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded')
+    var url = form.action;
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
-          form.reset()
-          var formElements = form.querySelector('.form-elements')
+          form.reset();
+          var formElements = form.querySelector(".form-elements");
           if (formElements) {
-            formElements.style.display = 'none' // hide form
+            formElements.style.display = "none"; // hide form
           }
-          successModal.showModal()
+          successModal.showModal();
         } else {
-          console.log('Form submission failed with status:', xhr.status)
+          console.log("Form submission failed with status:", xhr.status);
         }
 
         // Re-enable submit button after request completes (success or error)
         if (submitButton) {
-          submitButton.disabled = false
-          submitButton.classList.remove('submitting')
+          submitButton.disabled = false;
+          submitButton.classList.remove("submitting");
         }
       }
-    }
+    };
     // url encode form data for sending as post data
     var encoded = Object.keys(data)
       .map(function (k) {
-        return encodeURIComponent(k) + '=' + encodeURIComponent(data[k])
+        return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
       })
-      .join('&')
-    xhr.send(encoded)
+      .join("&");
+    xhr.send(encoded);
   }
 
   function loaded() {
     // bind to the submit event of our form
-    var forms = document.querySelectorAll('form.gform')
+    var forms = document.querySelectorAll("form.gform");
     for (var i = 0; i < forms.length; i++) {
-      forms[i].addEventListener('submit', handleFormSubmit, false)
+      forms[i].addEventListener("submit", handleFormSubmit, false);
     }
   }
-  document.addEventListener('DOMContentLoaded', loaded, false)
-})()
+  document.addEventListener("DOMContentLoaded", loaded, false);
+})();
