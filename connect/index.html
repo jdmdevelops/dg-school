@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Connect</title>
+    <link rel="icon" href="../images/favicon.svg" />
     <script src="../nav.js" defer></script>
 
     <script
@@ -47,7 +48,14 @@
             >
           </li>
           <li class="nav__item">
-            <a id="services" class="nav__link" href="https://duogloestheticstraining.glossgenius.com/services" target="_blank" rel="noopener noreferrer">Services</a>
+            <a
+              id="services"
+              class="nav__link"
+              href="https://duogloestheticstraining.glossgenius.com/services"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Services</a
+            >
           </li>
         </ul>
       </nav>
@@ -133,18 +141,29 @@
                 <label for="pref-email">Email</label>
               </div>
             </fieldset>
-            <div class="form__item">
-              <label for="highest-edu" class="block"
-                >Highest Level of Education Completed</label
-              >
+            <fieldset class="form__item radio-group">
+              <legend>
+                Have You Previously Completed An Esthetics Course?
+              </legend>
               <input
-                class="input"
-                type="text"
-                name="highest-edu"
-                id="highest-edu"
+                class="radio"
+                type="radio"
+                name="has_completed"
+                id="yes"
+                value="yes"
                 required
               />
-            </div>
+              <label for="yes">Yes</label>
+              <input
+                class="radio"
+                type="radio"
+                name="has_completed"
+                id="no"
+                value="no"
+                required
+              />
+              <label for="no">No</label>
+            </fieldset>
             <fieldset class="form__item radio-group">
               <legend>Which Course Are You Interested In?</legend>
               <div>
