@@ -7,7 +7,7 @@ hr {
 }
 
 .title {
-  background-image: url('../images/courses-title-bg.jpg');
+  background-image: url("../images/courses-title-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.5); /* darkness level */
@@ -16,6 +16,10 @@ hr {
 
 .flexible {
   padding-top: var(--fluid-space-y);
+}
+
+.hybrid {
+  margin-top: 24px;
 }
 
 .courses {
