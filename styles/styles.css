@@ -166,6 +166,13 @@ address {
 }
 
 /* Utility */
+
+.favicon {
+  svg {
+    background: yellow;
+  }
+}
+
 .card {
   display: flex;
   flex-direction: column;
