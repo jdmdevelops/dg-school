@@ -10,7 +10,7 @@ hr {
   background-image: url("../images/courses-title-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.5); /* darkness level */
+  background-color: rgba(0, 0, 0, 0.6); /* darkness level */
   background-blend-mode: multiply;
 }
 

@@ -2,7 +2,7 @@
 .hero {
   background-image: url("../images/hero-bg.jpeg");
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.5); /* darkness level */
+  background-color: rgba(0, 0, 0, 0.6); /* darkness level */
   background-blend-mode: multiply;
 }
 
