@@ -306,7 +306,7 @@ address {
   padding: var(--padding);
   margin-inline: auto;
 
-  font-size: 1.15em;
+  font-size: 1em;
   letter-spacing: 0.4em;
   text-transform: uppercase;
   font-weight: 600;

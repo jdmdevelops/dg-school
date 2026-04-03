@@ -1,0 +1,25 @@
+.title {
+  background-image: url("../images/services-title.jpg");
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.6); /* darkness level */
+  background-blend-mode: multiply;
+}
+
+.intro {
+  .button {
+    display: inline-block;
+    margin-top: var(--gutter);
+  }
+}
+
+.fundamentals {
+  background-color: var(--secondary-bg);
+}
+
+.masters {
+  background-color: var(--tertiary-bg);
+
+  li {
+    margin-bottom: var(--gutter);
+  }
+}
