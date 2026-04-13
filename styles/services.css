@@ -18,6 +18,7 @@
 
 .masters {
   background-color: var(--tertiary-bg);
+  padding: var(--gutter) 0;
 
   li {
     margin-bottom: var(--gutter);
