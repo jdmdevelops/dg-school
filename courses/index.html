@@ -107,17 +107,30 @@
               </div>
               <div class="esthetics__bottom">
                 <div>
-                  <h4>Students Receive:</h4>
-                  <ul>
-                    <li>Welcome gift full of fun surprises!</li>
-                    <li>Esthetics digital textbook</li>
-                    <li>Online learning platform</li>
-                    <li>Mannequin head</li>
-                    <li>Access to backbar of Circadia products</li>
-                    <li>Wax kit</li>
-                    <li>Makeup kit</li>
-                    <li>State board kit</li>
-                  </ul>
+                  <h4>What's in your kit?</h4>
+                  <div class="kit-container" onclick="toggleKit()">
+                    <dialog class="kit-items">
+                      <ul>
+                        <li>Welcome gift full of fun surprises!</li>
+                        <li>Esthetics digital textbook</li>
+                        <li>Online learning platform</li>
+                        <li>Mannequin head</li>
+                        <li>Access to backbar of Circadia products</li>
+                        <li>Wax kit</li>
+                        <li>Makeup kit</li>
+                        <li>State board kit</li>
+                      </ul>
+                    </dialog>
+
+                    <div class="kit">
+                      <div class="kit-flaps">
+                        <div class="kit-flap kit-flap-left"></div>
+                        <div class="kit-spacer"></div>
+                        <div class="kit-flap kit-flap-right"></div>
+                      </div>
+                      <div class="kit-body"></div>
+                    </div>
+                  </div>
                 </div>
                 <div>
                   <h4>Total Investment:</h4>
@@ -234,5 +247,18 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      function toggleKit() {
+        const popup = document.querySelector("dialog");
+        const kitContainer = document.querySelector(".kit-container");
+
+        console.log(popup, "popup");
+
+        kitContainer.classList.toggle("open");
+
+        // popup.showModal();
+      }
+    </script>
   </body>
 </html>

@@ -87,3 +87,71 @@ hr {
     min-width: 325px;
   }
 }
+
+/* kit*/
+
+.kit-container {
+}
+
+.kit-items {
+  background-color: white;
+}
+
+.kit {
+  background-color: grey;
+
+  height: 50px;
+  width: 50px;
+  border-radius: 2px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.kit-body {
+  border-top: black 2px solid;
+  flex: 1;
+}
+
+.kit-flap {
+  z-index: 1;
+  height: 4px;
+  flex: 1;
+
+  background-color: grey;
+  border-radius: 2px;
+}
+
+.kit-flaps {
+  display: flex;
+}
+
+.kit-flap-left {
+  transition: transform 0.3s ease-in-out;
+  transform-origin: 2px;
+}
+
+.kit-spacer {
+  background-color: black;
+  width: 2px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.kit-flap-right {
+  transition: transform 0.3s ease-in-out;
+  transform-origin: calc(100% - 2px);
+}
+
+.kit-container.open {
+  .kit-flap-left {
+    transform: rotate(-125deg);
+  }
+
+  .kit-spacer {
+    transform: scaleX(25);
+  }
+
+  .kit-flap-right {
+    transform: rotate(125deg);
+  }
+}
