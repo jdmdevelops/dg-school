@@ -47,7 +47,7 @@ hr {
 .esthetics__bottom {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: var(--gutter);
 }
 
 .esthetics__right {
@@ -76,7 +76,7 @@ hr {
 .masters__bottom {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: var(--gutter);
 }
 
 .masters__right {
@@ -86,4 +86,9 @@ hr {
     border-radius: 10px;
     min-width: 325px;
   }
+}
+
+.box-container {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
 }
