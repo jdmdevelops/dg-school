@@ -131,8 +131,12 @@
 
                     <div class="box-popup">
                       <ul>
+                        <li>Welcome gift full of fun surprises!</li>
+                        <li>Esthetics digital textbook</li>
+                        <li>Online learning platform</li>
                         <li>Facial supplies</li>
                         <li>Waxing essentials</li>
+                        <li>Makeup kit</li>
                         <li>Professional tools</li>
                         <li>Starter products</li>
                       </ul>
@@ -277,5 +281,28 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      const boxContainer = document.querySelector(".box-container");
+      const boxTrigger = boxContainer.querySelector(".box-trigger");
+
+      boxTrigger.addEventListener("click", (event) => {
+        event.stopPropagation();
+        boxContainer.classList.toggle("is-open");
+      });
+
+      document.addEventListener("click", (event) => {
+        if (!boxContainer.contains(event.target)) {
+          boxContainer.classList.remove("is-open");
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          boxContainer.classList.remove("is-open");
+          boxTrigger.blur();
+        }
+      });
+    </script>
   </body>
 </html>
