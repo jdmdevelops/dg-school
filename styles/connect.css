@@ -1,111 +1,113 @@
 .title {
-  background-image: url("../images/connect-title-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: rgba(0, 0, 0, 0.6); /* darkness level */
-  background-blend-mode: multiply;
+    background-image: url("../images/connect-title-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* darkness level */
+    background-blend-mode: multiply;
 }
 
 .inquiry__container {
-  --padding-outer: 1rem;
-  --padding-inner: 2rem;
+    --padding-outer: 1rem;
+    --padding-inner: 2rem;
 
-  display: flex;
-  flex-wrap: wrap;
-  padding: var(--padding-outer);
-  margin: 4rem 0;
-  background-color: var(--secondary-bg);
-  border-radius: var(--main-br);
+    display: flex;
+    flex-wrap: wrap;
+    padding: var(--padding-outer);
+    margin: 4rem 0;
+    background-color: var(--secondary-bg);
+    border-radius: var(--main-br);
 }
 
 .inquiry__header {
-  flex: 1;
-  min-height: 450px;
-  padding: var(--padding-inner);
-  background-color: var(--tertiary-bg);
-  background-image: url("../images/connect-header-bg.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: var(--main-br);
+    flex: 1;
+    min-height: 450px;
+    padding: var(--padding-inner);
+    background-color: var(--tertiary-bg);
+    background-image: url("../images/connect-header-bg.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: var(--main-br);
 }
 
 .inquiry__form {
-  flex: 2;
-  display: grid;
+    flex: 2;
+    display: grid;
 
-  padding: var(--padding-inner);
-  gap: 1.25rem;
+    padding: var(--padding-inner);
+    gap: 1.25rem;
 }
 
 .inquiry__submit {
-  -webkit-text-fill-color: unset;
+    -webkit-text-fill-color: unset;
 }
 
 .block {
-  display: block;
+    display: block;
 }
 
 .input {
-  border: none;
-  border-radius: 5px;
-  background-color: var(--lightest);
-  padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--lightest);
+    padding: 0.5rem;
 
-  &:focus-visible {
-    outline: 2px var(--accent) solid;
-  }
+    &:focus-visible {
+        outline: 2px var(--accent) solid;
+    }
 }
 
 .radio-group {
-  all: unset;
+    all: unset;
 }
 
 .radio {
-  accent-color: var(--accent);
+    accent-color: var(--accent);
 }
 
 .modal {
-  margin: auto auto;
-  padding: var(--padding);
-  background-color: var(--tertiary-bg);
-  border: none;
-  border-radius: var(--main-br);
+    margin: auto auto;
+    padding: var(--padding);
+    background-color: var(--tertiary-bg);
+    border: none;
+    border-radius: var(--main-br);
 
-  &::backdrop {
-    background-color: #e4e2ddb9;
-  }
+    &::backdrop {
+        background-color: #e4e2ddb9;
+    }
 }
 
 .modal__close {
-  margin-top: 1.25rem;
+    margin-top: 1.25rem;
 }
 
 button[type="submit"]:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
+    opacity: 0.7;
+    cursor: not-allowed;
 }
 
 button[type="submit"].submitting {
-  position: relative;
-  padding-right: 2.5rem; /* Make space for the spinner */
+    position: relative;
+    padding-right: 2.5rem;
+    /* Make space for the spinner */
 }
 
 button[type="submit"].submitting:after {
-  content: "";
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  width: 16px;
-  height: 16px;
-  margin-top: -8px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  border-top-color: transparent;
-  animation: spin 0.8s linear infinite;
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    margin-top: -8px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 0.8s linear infinite;
 }
 
 @keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+    to {
+        transform: rotate(360deg);
+    }
 }
