@@ -7,12 +7,18 @@ hr {
 }
 
 .title {
-    background-image: url("../images/courses-title-bg.jpg");
+    background-image: url("../images/courses-header.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.6);
     /* darkness level */
     background-blend-mode: multiply;
+}
+
+@media (max-width: 600px) {
+    .title {
+        background-image: url("../images/courses-header.mobile.jpeg");
+    }
 }
 
 .flexible {

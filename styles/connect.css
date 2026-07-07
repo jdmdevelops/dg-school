@@ -7,6 +7,14 @@
     background-blend-mode: multiply;
 }
 
+@media (max-width: 600px) {
+    .title {
+        background-image: url("../images/connect-header.mobile.jpeg");
+    }
+}
+
+
+
 .inquiry__container {
     --padding-outer: 1rem;
     --padding-inner: 2rem;

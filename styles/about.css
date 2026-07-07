@@ -1,9 +1,15 @@
 .title {
-    background-image: url("../images/about-title.jpeg");
+    background-image: url("../images/about-header.jpeg");
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.6);
     /* darkness level */
     background-blend-mode: multiply;
+}
+
+@media (max-width: 600px) {
+    .title {
+        background-image: url("../images/about-header.mobile.jpeg");
+    }
 }
 
 .story {
