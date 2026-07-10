@@ -1,94 +1,90 @@
 hr {
-  margin: var(--fluid-space-y) 0;
-  height: 5px;
-  background-color: var(--accent);
-  border-radius: 10px;
-  border: none;
+    margin: var(--fluid-space-y) 0;
+    height: 5px;
+    background-color: var(--accent);
+    border-radius: 10px;
+    border: none;
 }
 
 .title {
-  background-image: url("../images/courses-title-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: rgba(0, 0, 0, 0.6); /* darkness level */
-  background-blend-mode: multiply;
+    background-image: url("../images/courses-header.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* darkness level */
+    background-blend-mode: multiply;
+}
+
+@media (max-width: 600px) {
+    .title {
+        background-image: url("../images/courses-header.mobile.jpeg");
+    }
 }
 
 .flexible {
-  padding-top: var(--fluid-space-y);
+    padding-top: var(--fluid-space-y);
 }
 
 .hybrid {
-  margin-top: 24px;
+    margin-top: 24px;
 }
 
 .courses {
-  background-color: var(--secondary-bg);
-  padding-bottom: var(--fluid-space-y);
+    background-color: var(--secondary-bg);
+    padding-bottom: var(--fluid-space-y);
 }
 
-.esthetics {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--gutter);
+.courses__img {
+    border-radius: 10px;
+
 }
+
+
 
 .cta {
-  margin-top: var(--gutter);
+    margin-top: var(--gutter);
 }
 
 .esthetics__left {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gutter);
-  max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gutter);
+    max-width: 600px;
 }
 
 .esthetics__bottom {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--gutter);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gutter);
 }
 
-.esthetics__right {
-  flex: 1;
 
-  img {
-    border-radius: 10px;
-    min-width: 325px;
-  }
+.masters__right {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gutter);
+    max-width: 600px;
 }
 
-.masters {
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: wrap;
-  gap: var(--gutter);
+@media (max-width: 600px) {
+    .masters__right {
+        order: 2;
+    }
 }
 
 .masters__left {
-  display: flex;
-  flex-direction: column;
-  gap: var(--gutter);
-  max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gutter);
 }
 
 .masters__bottom {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--gutter);
-}
-
-.masters__right {
-  flex: 1;
-
-  img {
-    border-radius: 10px;
-    min-width: 325px;
-  }
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gutter);
 }
 
 .box-container {
-  margin-top: 0.5rem;
-  margin-left: 1rem;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
 }
