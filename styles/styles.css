@@ -144,10 +144,12 @@ h3 {
     letter-spacing: 0.2em;
     text-transform: uppercase;
     font-weight: 600;
+    margin-bottom: 8px;
 }
 
 h4 {
     font-size: 1.15em;
+    margin-bottom: 8px;
 }
 
 h5 {

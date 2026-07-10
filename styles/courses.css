@@ -66,6 +66,18 @@ hr {
     max-width: 600px;
 }
 
+@media (max-width: 600px) {
+    .masters__right {
+        order: 2;
+    }
+}
+
+.masters__left {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gutter);
+}
+
 .masters__bottom {
     display: flex;
     flex-wrap: wrap;
